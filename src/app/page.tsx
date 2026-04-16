@@ -29,70 +29,88 @@ const editorialCards = [
 
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto px-5 py-8">
-      {/* Hero */}
-      <section className="mb-12 text-center">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-bhs-lime font-semibold mb-4">
-          Welcome to
-        </p>
-        <h1 className="font-serif text-4xl sm:text-5xl mb-4 leading-tight">
-          Bal Harbour Shops
-        </h1>
-        <p className="text-white/50 text-sm font-light max-w-md mx-auto leading-relaxed">
-          The world&apos;s finest luxury shopping destination in Miami, Florida.
-          Over 100 boutiques, world-class dining, and unforgettable experiences.
+    <div className="px-5 py-6">
+      {/* Welcome */}
+      <section className="mb-6">
+        <div className="flex items-center gap-3 mb-1">
+          <h1 className="font-serif text-3xl text-bhs-black">
+            Welcome to Luxury
+          </h1>
+          <span className="bg-bhs-lime text-bhs-black text-[11px] font-semibold tracking-wide px-3 py-1 rounded-full">
+            Discover
+          </span>
+        </div>
+        <p className="text-bhs-muted text-sm font-light">
+          Welcome to the Bal Harbour Shops experience.
+          <br />
+          Over 100 boutiques, world-class dining, and unforgettable moments.
         </p>
       </section>
 
-      {/* Quick links */}
-      <section className="grid grid-cols-3 gap-3 mb-12">
+      {/* Spend tracker card */}
+      <section className="bg-bhs-gray rounded-xl p-5 mb-6">
+        <p className="font-semibold text-bhs-black text-sm mb-3">
+          Today&apos;s Hours
+        </p>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-2xl font-serif text-bhs-black">11 AM – 9 PM</p>
+            <p className="text-xs text-bhs-muted mt-1">
+              9700 Collins Avenue, Bal Harbour, FL 33154
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick actions */}
+      <section className="grid grid-cols-3 gap-3 mb-8">
         <Link
           href="/directory"
-          className="border border-bhs-border p-4 text-center hover:border-bhs-lime/30 transition-colors group"
+          className="bg-bhs-gray rounded-xl p-4 text-center hover:bg-bhs-border transition-colors"
         >
-          <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-muted group-hover:text-bhs-lime transition-colors mb-1">
-            Explore
-          </p>
-          <p className="font-serif text-lg">Directory</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.3} stroke="currentColor" className="w-7 h-7 mx-auto mb-2 text-bhs-black">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.016A3.001 3.001 0 0 0 20.25 9.35m-16.5 0a3.001 3.001 0 0 1 3.75.615m12.75-.615a3.001 3.001 0 0 1-3.75.615m-9 0a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3m-9 0h6" />
+          </svg>
+          <p className="text-xs font-medium text-bhs-black">Directory</p>
         </Link>
         <Link
           href="/events"
-          className="border border-bhs-border p-4 text-center hover:border-bhs-lime/30 transition-colors group"
+          className="bg-bhs-gray rounded-xl p-4 text-center hover:bg-bhs-border transition-colors"
         >
-          <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-muted group-hover:text-bhs-lime transition-colors mb-1">
-            Upcoming
-          </p>
-          <p className="font-serif text-lg">Events</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.3} stroke="currentColor" className="w-7 h-7 mx-auto mb-2 text-bhs-black">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+          </svg>
+          <p className="text-xs font-medium text-bhs-black">Events</p>
         </Link>
         <Link
           href="/rewards"
-          className="border border-bhs-border p-4 text-center hover:border-bhs-lime/30 transition-colors group"
+          className="bg-bhs-gray rounded-xl p-4 text-center hover:bg-bhs-border transition-colors"
         >
-          <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-muted group-hover:text-bhs-lime transition-colors mb-1">
-            Members
-          </p>
-          <p className="font-serif text-lg">Rewards</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.3} stroke="currentColor" className="w-7 h-7 mx-auto mb-2 text-bhs-black">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+          </svg>
+          <p className="text-xs font-medium text-bhs-black">Rewards</p>
         </Link>
       </section>
 
       {/* Editorial */}
-      <section className="mb-12">
-        <h2 className="text-[11px] uppercase tracking-[0.2em] text-bhs-lime font-semibold mb-6">
+      <section className="mb-8">
+        <h2 className="text-xs uppercase tracking-[0.2em] font-semibold text-bhs-muted mb-4">
           The BHS Edit
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-3">
           {editorialCards.map((card) => (
             <div
               key={card.title}
-              className="border border-bhs-border p-5 hover:border-bhs-lime/30 transition-colors group cursor-pointer"
+              className="bg-bhs-gray rounded-xl p-5 cursor-pointer hover:bg-bhs-border transition-colors"
             >
-              <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-muted mb-2">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-lime font-bold mb-1.5">
                 {card.subtitle}
               </p>
-              <h3 className="font-serif text-xl mb-2 group-hover:text-bhs-lime transition-colors">
+              <h3 className="font-serif text-lg text-bhs-black mb-1.5">
                 {card.title}
               </h3>
-              <p className="text-sm text-white/50 font-light leading-relaxed">
+              <p className="text-sm text-bhs-muted font-light leading-relaxed">
                 {card.description}
               </p>
             </div>
@@ -100,24 +118,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="border border-bhs-lime/30 bg-bhs-lime/5 p-6 text-center mb-8">
-        <h2 className="font-serif text-xl mb-2">The BHS Roundup</h2>
-        <p className="text-sm text-white/50 font-light max-w-sm mx-auto">
+      {/* Newsletter */}
+      <section className="bg-bhs-lime rounded-xl p-5 text-center mb-4">
+        <h2 className="font-serif text-lg text-bhs-black mb-1">
+          The BHS Roundup
+        </h2>
+        <p className="text-xs text-bhs-black/60 font-light">
           Subscribe to our biweekly newsletter covering the latest in fashion,
           trends, and culture.
         </p>
       </section>
-
-      {/* Footer info */}
-      <footer className="text-center pb-4">
-        <p className="text-[11px] text-bhs-muted tracking-wide">
-          9700 Collins Avenue, Bal Harbour, FL 33154
-        </p>
-        <p className="text-[11px] text-bhs-muted tracking-wide mt-1">
-          Open today 11 AM – 9 PM
-        </p>
-      </footer>
     </div>
   );
 }

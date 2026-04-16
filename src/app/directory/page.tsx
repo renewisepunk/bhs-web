@@ -24,29 +24,31 @@ export default function DirectoryPage() {
   const categories = [...new Set(stores.map((s) => s.category))];
 
   return (
-    <div className="max-w-2xl mx-auto px-5 py-8">
-      <h1 className="font-serif text-3xl mb-2">Store Directory</h1>
-      <p className="text-bhs-muted text-sm mb-8 font-light">
+    <div className="px-5 py-6">
+      <h1 className="font-serif text-3xl text-bhs-black mb-1">
+        Store Directory
+      </h1>
+      <p className="text-bhs-muted text-sm font-light mb-6">
         Over 100 luxury boutiques, restaurants, and world-class experiences.
       </p>
 
       {categories.map((category) => (
-        <div key={category} className="mb-8">
-          <h2 className="text-[11px] uppercase tracking-[0.2em] text-bhs-lime font-semibold mb-3">
+        <div key={category} className="mb-6">
+          <h2 className="text-[11px] uppercase tracking-[0.2em] text-bhs-lime font-bold mb-2 bg-bhs-gray rounded-lg px-3 py-2">
             {category}
           </h2>
-          <div className="space-y-0">
+          <div>
             {stores
               .filter((s) => s.category === category)
               .map((store) => (
                 <div
                   key={store.name}
-                  className="flex items-center justify-between py-3 border-b border-bhs-border group cursor-pointer hover:bg-white/[0.02] transition-colors px-2 -mx-2"
+                  className="flex items-center justify-between py-3.5 border-b border-bhs-border cursor-pointer hover:bg-bhs-gray transition-colors px-3 -mx-3 rounded"
                 >
-                  <span className="font-light tracking-wide text-sm">
+                  <span className="font-light text-sm text-bhs-black">
                     {store.name}
                   </span>
-                  <span className="text-[11px] text-bhs-muted tracking-wide">
+                  <span className="text-[11px] text-bhs-muted">
                     {store.level}
                   </span>
                 </div>
