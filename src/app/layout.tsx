@@ -34,9 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased bg-neutral-100`}
       >
-        <div className="flex flex-col h-[100dvh] overflow-hidden">
+        <div className="mx-auto w-full max-w-[430px] h-[100dvh] flex flex-col overflow-hidden bg-white shadow-2xl">
           <Header />
           <main className="flex-1 overflow-y-auto">{children}</main>
           <BottomNav />

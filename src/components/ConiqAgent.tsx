@@ -17,7 +17,8 @@ export default function ConiqAgent() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-100">
+      <div className="w-full max-w-[430px] h-[100dvh] flex flex-col bg-white shadow-2xl">
       {/* Header bar */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-bhs-border bg-white">
         <span className="font-serif text-sm text-bhs-black">
@@ -52,6 +53,7 @@ export default function ConiqAgent() {
         title="ConIQ AI Chat"
         allow="microphone"
       />
+      </div>
     </div>
   );
 }
