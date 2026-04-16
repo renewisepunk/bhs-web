@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-5 py-3 bg-white border-b border-bhs-border">
+    <header className="relative flex items-center justify-between px-5 py-2 bg-white border-b border-bhs-border">
       {/* Hamburger menu */}
       <button className="p-1" aria-label="Menu">
         <svg
@@ -22,16 +24,15 @@ export default function Header() {
       </button>
 
       {/* Centered BHS logo */}
-      <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none">
-        <span className="text-[11px] font-serif tracking-wide text-bhs-black">
-          Bal
-        </span>
-        <span className="text-[9px] tracking-[0.15em] text-bhs-black font-light">
-          Harbour
-        </span>
-        <span className="text-[9px] tracking-[0.15em] text-bhs-black font-light">
-          Shops
-        </span>
+      <div className="absolute left-1/2 -translate-x-1/2">
+        <Image
+          src="/bhs-logo.png"
+          alt="Bal Harbour Shops"
+          width={60}
+          height={40}
+          className="h-9 w-auto"
+          priority
+        />
       </div>
 
       {/* Profile icon */}
