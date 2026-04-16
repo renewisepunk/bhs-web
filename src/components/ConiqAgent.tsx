@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -15,12 +15,28 @@ declare global {
   }
 }
 
+let initialized = false;
+
+export function openConiqWidget(): void {
+  const container = document.getElementById("coniq-direct-widget-container");
+  if (!container) return;
+
+  const toggleBtn =
+    container.querySelector<HTMLButtonElement>("button") ??
+    container.querySelector<HTMLElement>("[role='button']") ??
+    container.querySelector<HTMLElement>("div[class*='toggle']") ??
+    container.querySelector<HTMLElement>("div[class*='button']");
+
+  if (toggleBtn) {
+    toggleBtn.click();
+  }
+}
+
 export default function ConiqAgent() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(initialized);
 
   useEffect(() => {
-    if (loaded) return;
+    if (initialized) return;
 
     const script = document.createElement("script");
     script.src = "https://agent.coniq.com/direct-widget.iife.js";
@@ -32,25 +48,11 @@ export default function ConiqAgent() {
         width: 800,
         height: 1000,
       });
+      initialized = true;
       setLoaded(true);
     };
     document.body.appendChild(script);
+  }, []);
 
-    return () => {
-      script.remove();
-    };
-  }, [loaded]);
-
-  return (
-    <div ref={containerRef} className="w-full h-full flex items-center justify-center">
-      {!loaded && (
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-8 h-8 border-2 border-bhs-lime/30 border-t-bhs-lime rounded-full animate-spin" />
-          <p className="text-sm text-bhs-muted tracking-wide">
-            Loading your concierge...
-          </p>
-        </div>
-      )}
-    </div>
-  );
+  return loaded ? null : null;
 }

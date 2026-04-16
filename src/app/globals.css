@@ -19,30 +19,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ConIQ widget overrides to fit our layout */
+/* Keep the ConIQ widget above our bottom nav */
 #coniq-direct-widget-container {
-  position: relative !important;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  bottom: auto !important;
-  right: auto !important;
-  z-index: 1 !important;
-}
-
-#coniq-direct-widget-container iframe {
-  width: 100% !important;
-  height: 100% !important;
-  border: none !important;
-  border-radius: 0 !important;
-}
-
-/* Hide the default widget toggle button */
-#coniq-direct-widget-container > button,
-#coniq-direct-widget-container > div[class*="toggle"],
-#coniq-direct-widget-container > div[class*="button"] {
-  display: none !important;
+  z-index: 50 !important;
 }
 
 /* Scrollbar styling */

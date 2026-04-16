@@ -3,6 +3,7 @@ import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
 import Header from "@/components/Header";
+import ConiqAgent from "@/components/ConiqAgent";
 
 const headingFont = DM_Serif_Display({
   variable: "--font-heading",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <main className="flex-1 overflow-y-auto">{children}</main>
           <BottomNav />
         </div>
+        <ConiqAgent />
       </body>
     </html>
   );
