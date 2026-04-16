@@ -34,7 +34,7 @@ export default function DirectoryPage() {
 
       {categories.map((category) => (
         <div key={category} className="mb-6">
-          <h2 className="text-[11px] uppercase tracking-[0.2em] text-bhs-lime font-bold mb-2 bg-bhs-gray rounded-lg px-3 py-2">
+          <h2 className="text-[11px] uppercase tracking-[0.2em] text-bhs-lime font-bold mb-2 bg-bhs-black rounded-lg px-3 py-2">
             {category}
           </h2>
           <div>

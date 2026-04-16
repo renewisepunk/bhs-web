@@ -104,7 +104,7 @@ export default function Home() {
               key={card.title}
               className="bg-bhs-gray rounded-xl p-5 cursor-pointer hover:bg-bhs-border transition-colors"
             >
-              <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-lime font-bold mb-1.5">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-bhs-black/50 font-bold mb-1.5">
                 {card.subtitle}
               </p>
               <h3 className="font-serif text-lg text-bhs-black mb-1.5">
