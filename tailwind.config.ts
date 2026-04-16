@@ -16,7 +16,7 @@ export default {
         "bhs-black": "#1a1a1a",
         "bhs-dark": "#2a2a2a",
         "bhs-gray": "#f5f5f5",
-        "bhs-muted": "#999999",
+        "bhs-muted": "#555555",
         "bhs-border": "#e8e8e8",
         "bhs-card": "#f7f7f7",
       },
